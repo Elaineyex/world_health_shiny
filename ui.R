@@ -15,7 +15,7 @@ world_panel <- tabPanel(
         p(),
         selectInput("datasetMap", "Choose a health topic",
                     choices = c("Neonatal Mortality Rate","Maternal Mortality Ratio",
-                                "Infant Mortality Rate","Birth Attended By Skilled Personal",
+                                "Infant Mortality Rate","Birth Attended By Skilled Personnel",
                                 "Adolescent Birth Rate", 
                                 "Basic Sanitization Services", "Basic Drinking Water Services",
                                 "Crude Suicide Rates",
@@ -38,7 +38,7 @@ sidebar_content <-
     sidebarPanel(
     selectInput("dataset", "Choose a health topic",
                 choices = c("Neonatal Mortality Rate","Maternal Mortality Ratio",
-                            "Infant Mortality Rate","Birth Attended By Skilled Personal",
+                            "Infant Mortality Rate","Birth Attended By Skilled Personnel",
                             "Adolescent Birth Rate", 
                             "Basic Sanitization Services", "Basic Drinking Water Services",
                             "Crude Suicide Rates", 
@@ -79,7 +79,7 @@ continent_panel <-
              sidebarLayout(
                  sidebarPanel(selectInput("datasetContinent", "Choose a health topic",
                              choices = c("Neonatal Mortality Rate","Maternal Mortality Ratio",
-                                         "Infant Mortality Rate","Birth Attended By Skilled Personal",
+                                         "Infant Mortality Rate","Birth Attended By Skilled Personnel",
                                          "Adolescent Birth Rate", 
                                          "Basic Sanitization Services", "Basic Drinking Water Services",
                                          "Crude Suicide Rates", 
@@ -114,7 +114,8 @@ data_panel <- tabPanel(
     p("5. French Guiana, Guadeloupe, Martinique, Mayotte, and Reunion were labeled as France as the sole exception to the previous note. Since these overseas 
     departments/regions are considered to hold the same status as mainland France, it is likely that the data collected for France also pulled from each territory."),
     p("6. The former Yugoslav Republic of Macedonia was relabeled as North Macedonia in accordance with a naming dispute being resolved within recent years, even though 
-      the WHO data has not reflected these changes.")
+      the WHO data has not reflected these changes."),
+    p("see reference in final write-up")
     
 )
 
@@ -129,44 +130,39 @@ about_panel <- tabPanel(
     tags$br(), tags$br(),
     tags$h4("Reports"),
     tags$h5("Health Patterns"),
-    "How do the health patterns change throughout time? Are nations that were not struggling with easily preventable diseases now struggling with and what countries are there and why?",
-    tags$br(),
-"The current global health suggested that, overall, fewer people are dying from communicable and non-communicable diseases, especially in low- and middle-income countries. More people are 
+    strong("How do the health patterns change throughout time? Are nations that were not struggling with easily preventable diseases now struggling with and what countries are there and why?"),
+p("The current global health suggested that, overall, fewer people are dying from communicable and non-communicable diseases, especially in low- and middle-income countries. More people are 
 gaining access to clean water and basic sanitation services. Worldwide, there is also a decreasing trend in maternal and infant mortality rates, accompanied by an increase in skilled health 
 professionals density. Although the trend on world health looks promising, there are still differences between high-income areas vs. middle- and low-income areas.  Continent-wise, Europe 
 tends to outperform the rest of the continents, by having the lowest incidence of communicable disease, lowest mortality rate, and the highest rate of access to professional health personnel.  
 On the other hand, despite the positive trend in world health, certain countries still face health challenges. For example, countries like Afghanistan and the Philippines are currently experiencing 
-a surge in HIV infections since 2000.",
-tags$br(),
+a surge in HIV infections since 2000."),
 tags$h5("Biological Sex Gap"),
-"Considering biological sex (F/M) - Is there a biological gap with health issues around the world?",
-tags$br(),
-"Overall, countries across the world have seen a decrease in infant mortality in both sexes. In addition, both sexes have a higher life expectancy since birth and lower HIV infections. However, 
-there still exists a gap between sexes regarding health outcomes. In particular, male infants tend to experience a higher infant mortality rate, lower life expectancy, and higher HIV infections 
-in comparison to female infants.",
-tags$br(),
+strong("Considering areas with less health personnel as well as biological sex (F/M) - Is there a biological sex gap with health issues around the world?"),
+p("Overall, countries across the world have seen a decrease in infant mortality and HIV infections as well as an increase in life expectancy since birth. 
+However, there still exists a gap between sexes regarding health outcomes. In particular, males tend to experience a higher infant mortality rate, lower life 
+expectancy, and higher HIV infections in comparison to females. Notably, such sex disparity appears to be more salient in countries with less health personnel. 
+For example, in Chad, where only around 20% of the births were attended by professional health personnel, there is a larger gap in infant mortality rate between 
+males and females than there is in Argentina, where the rate of births attended by professionals is around 95%. On the other hand, we acknowledge that the current 
+health system could disproportionally put women and non-binary people at disadvantage. That said, the datasets we have did not collect gender identity, so we could 
+not assess these important health disparities in this report.
+"),
 tags$h5("Future Directions"),
-"What may be important courses of action to consider for medical personnel and local governments in order to ensure good public health/safety?",
-tags$br(),
-"One way to ensure good public health and safety would be to increase national and international investment and support in research aimed specifically at improving health services coverage within 
+strong("What may be important courses of action to consider for medical personnel and local governments in order to ensure good public health/safety?"),
+p("One way to ensure good public health and safety would be to increase national and international investment and support in research aimed specifically at improving health services coverage within 
 and between countries, especially for low- and middle-income countries that have lots of health burdens. It is critical to encourage close collaborations between policymakers and researchers to adapt 
 scientific findings into public health programs. In addition, health organizations around the world should continue building global and national research networks to coordinate research efforts. Finally, 
-local governments should identify regions of high risk and take special measures to protect these population groups, taking into consideration their specific circumstances.",
-tags$br(),
-"Are there any potential solutions/ways to prevent more health issues? - What might the potential barriers be for some countries?",
-tags$br(),
-"It requires a global effort to ensure affordable access to health promotion and disease prevention programs and health care systems. One area of focus could be to build infrastructures that 
-would ensure people access to safe and readily available water and sanitation services within and across countries.",
-tags$br(),
-"For certain communicable diseases, making vaccines widely available around the world could help reduce the incidence of that disease and reduce the social and economic burden of the disease on the community. 
-The government needs to place an emphasis on leveraging resources and incentivizing the development and production of vaccines on a national level. ",
-tags$br(),
-"Finally, the government could focus on developing educational programs to promote health literacy, such as destigmatizing mental illness and suicides, in all populations which would allow people to make appropriate health decisions.",
-tags$br(),
-"In the context of national efforts to develop and implement public health policies, it is vital to not only protect and promote the well-being of its citizens, but also address potential barriers that certain population groups face towards 
+local governments should identify regions of high risk and take special measures to protect these population groups, taking into consideration their specific circumstances."),
+strong("Are there any potential solutions/ways to prevent more health issues? - What might the potential barriers be for some countries?"),
+p("It requires a global effort to ensure affordable access to health care systems as well as health promotion and disease prevention programs. One area of focus could be to build infrastructures that 
+  would ensure access to safe and readily available water and sanitation services for people within and across countries."),
+p("For certain communicable diseases, making vaccines widely available around the world could help reduce the incidence of that disease and lessen the social and economic burden of the disease on the community. The government needs to place 
+  an emphasis on leveraging resources and incentivizing the development and production of vaccines on a national level."),
+p("Finally, the government could focus on developing educational programs to promote health literacy, such as destigmatizing mental illness and suicides, in all populations which would allow people to make appropriate health decisions."),
+p("In the context of national efforts to develop and implement public health policies, it is vital to not only protect and promote the well-being of its citizens, but also address potential barriers that certain population groups face towards 
 getting access to health service. Social determinants, such as high poverty rate, stigmatization surrounding health behaviors, and educational disparity that are associated with diminished resources, could be those barriers. Thus, it is essential 
-to involve other sections, such as the education, labor, and welfare sections, in addition to promoting health service through the health section.",
-    tags$br(), tags$br(),
+to involve other sections, such as the education, labor, and welfare sections, in addition to promoting health service through the health section."),
+    tags$br(),
     tags$h4("Code"),
     "Code and data used to generate this Shiny app are available on ",tags$a(href="https://github.com/Elaineyex/world_health_shiny", "Github."),
     tags$br(), tags$br(),
